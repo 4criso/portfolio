@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=11">
+<link rel="stylesheet" href="assets/style.css?v=12">
 <meta name="theme-color" content="#0b1a1f">
 <script>try{var t=localStorage.getItem('mm-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
@@ -245,15 +245,39 @@
     <h2 class="sec-h reveal"><span class="num mono">04</span><span lang="pt">Contato</span><span lang="en">Contact</span></h2>
     <p class="contact-lead reveal"><span lang="pt">Aberto a oportunidades em Controle de Qualidade, laboratório e desenvolvimento de compostos de borracha.</span><span lang="en">Open to opportunities in Quality Control, laboratory and rubber compound development.</span></p>
     <div class="contact-grid">
-      <div class="c-item spot">
-        <span class="mono small">E-mail</span>
-        <a class="c-link" href="mailto:rodrigues.mavignier@gmail.com">rodrigues.mavignier@gmail.com</a>
-        <button type="button" class="copy" id="copyMail" data-copy="rodrigues.mavignier@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span lang="pt">Copiar</span><span lang="en">Copy</span></button>
+      <div class="cc cc-mail spot">
+        <span class="cc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg></span>
+        <span class="cc-l mono">E-mail</span>
+        <a class="cc-v" href="mailto:rodrigues.mavignier@gmail.com">rodrigues.mavignier@gmail.com</a>
+        <div class="cc-acts">
+          <a class="cc-btn" href="mailto:rodrigues.mavignier@gmail.com"><span lang="pt">Enviar e-mail</span><span lang="en">Send e-mail</span></a>
+          <button type="button" class="cc-btn ghost" id="copyMail" data-copy="rodrigues.mavignier@gmail.com"><span lang="pt">Copiar</span><span lang="en">Copy</span></button>
+        </div>
       </div>
-      <a href="https://wa.me/5511940862791" target="_blank" rel="noopener" class="c-item spot"><span class="mono small">WhatsApp</span>+55 11 94086-2791<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-      <a href="https://www.linkedin.com/in/matheus-mavignier-quimico/" target="_blank" rel="noopener" class="c-item spot"><span class="mono small">LinkedIn</span><span lang="pt">acessar perfil</span><span lang="en">view profile</span><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-      <a href="assets/docs/CV_Matheus_Mavignier_PT.pdf" target="_blank" rel="noopener" class="c-item spot" lang="pt"><span class="mono small">Currículo</span>baixar PDF<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></span></a>
-      <a href="assets/docs/CV_Matheus_Mavignier_EN.pdf" target="_blank" rel="noopener" class="c-item spot" lang="en"><span class="mono small">Résumé</span>download PDF<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></span></a>
+      <a class="cc cc-wa spot" href="https://wa.me/5511940862791" target="_blank" rel="noopener">
+        <span class="cc-ic"><svg viewBox="0 0 24 24" class="fill"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.3 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg></span>
+        <span class="cc-l mono">WhatsApp</span>
+        <span class="cc-v">+55 11 94086-2791</span>
+        <span class="cc-acts"><span class="cc-btn"><span lang="pt">Conversar</span><span lang="en">Chat</span></span></span>
+      </a>
+      <a class="cc cc-li spot" href="https://www.linkedin.com/in/matheus-mavignier-quimico/" target="_blank" rel="noopener">
+        <span class="cc-ic"><svg viewBox="0 0 24 24" class="fill"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM10 9.5h3.8v1.6h.06c.53-1 1.83-2 3.77-2 4.03 0 4.77 2.6 4.77 6v5.4h-4v-4.8c0-1.15-.02-2.62-1.6-2.62-1.6 0-1.84 1.25-1.84 2.54v4.88H10z"/></svg></span>
+        <span class="cc-l mono">LinkedIn</span>
+        <span class="cc-v">Matheus Mavignier</span>
+        <span class="cc-acts"><span class="cc-btn"><span lang="pt">Ver perfil</span><span lang="en">View profile</span></span></span>
+      </a>
+      <a class="cc cc-cv spot" href="assets/docs/CV_Matheus_Mavignier_PT.pdf" target="_blank" rel="noopener" lang="pt">
+        <span class="cc-ic"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg></span>
+        <span class="cc-l mono">Currículo</span>
+        <span class="cc-v">PDF · 1 página</span>
+        <span class="cc-acts"><span class="cc-btn">Baixar PDF</span></span>
+      </a>
+      <a class="cc cc-cv spot" href="assets/docs/CV_Matheus_Mavignier_EN.pdf" target="_blank" rel="noopener" lang="en">
+        <span class="cc-ic"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg></span>
+        <span class="cc-l mono">Résumé</span>
+        <span class="cc-v">PDF · 1 page</span>
+        <span class="cc-acts"><span class="cc-btn">Download PDF</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -292,6 +316,6 @@
 </button>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="assets/script.js?v=11"></script>
+<script src="assets/script.js?v=12"></script>
 </body>
 </html>
