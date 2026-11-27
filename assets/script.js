@@ -117,9 +117,18 @@
       if (open) Array.prototype.forEach.call(item.parentNode.children, function (sib) {
         if (sib !== item && sib.classList.contains('open')) { sib.classList.remove('open'); var h = sib.querySelector('.acc-h'); if (h) h.setAttribute('aria-expanded', 'false'); }
       });
+      var y0 = btn.getBoundingClientRect().top, minTop = (top ? top.offsetHeight : 66) + 12;
+      var target = Math.max(minTop, Math.min(y0, window.innerHeight * .45));
       item.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      setTimeout(onScroll, 520);
+      // keep the tapped header on screen while siblings collapse/expand
+      var tStart = null;
+      (function keep(ts) {
+        if (tStart === null) tStart = ts;
+        var d = btn.getBoundingClientRect().top - target;
+        if (Math.abs(d) > 1) window.scrollBy(0, d);
+        if (ts - tStart < 650) requestAnimationFrame(keep); else onScroll();
+      })(performance.now());
     });
   });
   // stagger indexes
