@@ -40,17 +40,39 @@
 
   /* ---------- drawer menu ---------- */
   var menuBtn = $('#menuBtn'), drawer = $('#drawer'), scrim = $('#scrim');
-  function setMenu(open) {
+  var menuHist = false, pendingTarget = null;
+  function applyMenu(open) {
     root.classList.toggle('menu-open', open);
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     drawer.style.transform = '';
     if (open) setTimeout(function () { $('#drawerClose').focus(); }, 300); else menuBtn.focus({ preventScroll: true });
   }
+  function setMenu(open) {
+    if (open) {
+      if (!menuHist) { history.pushState({ mmMenu: 1 }, ''); menuHist = true; }
+      applyMenu(true);
+    } else {
+      applyMenu(false);
+      if (menuHist) { menuHist = false; history.back(); } else goPending();
+    }
+  }
+  function goPending() {
+    if (!pendingTarget) return;
+    var t = document.querySelector(pendingTarget); pendingTarget = null;
+    if (t) setTimeout(function () { t.scrollIntoView({ behavior: 'smooth' }); }, 60);
+  }
+  // back button (PC or phone) closes the drawer instead of leaving the page
+  window.addEventListener('popstate', function () {
+    if (root.classList.contains('menu-open')) { menuHist = false; applyMenu(false); }
+    goPending();
+  });
   menuBtn.addEventListener('click', function () { setMenu(!root.classList.contains('menu-open')); });
   $('#drawerClose').addEventListener('click', function () { setMenu(false); });
   scrim.addEventListener('click', function () { setMenu(false); });
-  $$('.drawer a[href^="#"]').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  $$('.drawer a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); pendingTarget = a.getAttribute('href'); setMenu(false); });
+  });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('menu-open')) setMenu(false); });
   // swipe right to close
   var sx = null, dx = 0;

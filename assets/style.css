@@ -399,3 +399,14 @@ html[data-theme="dark"] .t-liquid{animation:fillup 7s linear infinite,endpoint-d
 }
 @media (max-width:900px){.hero-in{grid-template-columns:1fr}}
 .tag{white-space:nowrap}
+/* contact arrow icons */
+.c-item{position:relative}
+.c-item .arrow{margin-top:auto;align-self:flex-end;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;transition:transform .3s cubic-bezier(.3,1.5,.4,1),background .25s,border-color .25s,color .25s}
+.c-item .arrow svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.c-item:hover .arrow{transform:translate(3px,-3px);background:var(--amber);border-color:var(--amber);color:#0d2830}
+@media (max-width:520px){
+  .c-item{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center;padding:18px}
+  .c-item > :not(.arrow){grid-column:1}
+  .c-item .arrow{grid-column:2;grid-row:1/span 2;margin:0;align-self:center}
+}
+.copy{justify-self:start}
