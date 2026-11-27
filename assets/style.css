@@ -440,3 +440,10 @@ a.cc-v:hover{text-decoration:underline}
   .cc-btn{flex:1}
 }
 @media (min-width:1001px){.contact-grid{grid-template-columns:1.45fr 1fr 1fr 1fr}.cc-mail .cc-v{white-space:nowrap;overflow-wrap:normal}}
+/* softer action buttons, tinted per card */
+.cc{--c:#22a3a0}
+.cc-wa{--c:#25d366}.cc-li{--c:#3b8fe0}.cc-cv{--c:#f2a33a}
+.cc-btn{background:color-mix(in srgb,var(--c) 16%,transparent);color:color-mix(in srgb,var(--c) 70%,#fff);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);font-weight:600}
+.cc-btn.ghost{background:transparent;color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.2)}
+.cc:hover .cc-btn:not(.ghost),.cc-btn:not(.ghost):hover{background:var(--c);border-color:var(--c);color:#0b1a1f}
+.cc-btn.ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}
