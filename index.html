@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matheus Mavignier · Analista Químico</title>
+<meta name="description" content="Portfólio de Matheus Rodrigues Mavignier dos Santos — Analista Químico e Técnico em Química (CRQ-IV), Controle de Qualidade de matérias-primas para borracha e elastômeros.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=9">
+<meta name="theme-color" content="#0b1a1f">
+<script>try{var t=localStorage.getItem('mm-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#inicio" class="mark" aria-label="Início">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" fill="none" stroke="currentColor" stroke-width="2.2"/><text x="20" y="24.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="currentColor">MM</text></svg>
+      <span class="mark-t">Matheus Mavignier</span>
+    </a>
+    <nav id="nav" class="desk-nav"><span class="ind" aria-hidden="true"></span>
+      <a href="#sobre"><span lang="pt">Sobre</span><span lang="en">About</span></a>
+      <a href="#competencias"><span lang="pt">Competências</span><span lang="en">Skills</span></a>
+      <a href="#trajetoria"><span lang="pt">Trajetória</span><span lang="en">Background</span></a>
+      <a href="#contato"><span lang="pt">Contato</span><span lang="en">Contact</span></a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" type="button" aria-label="Alternar tema claro/escuro">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>
+    </button>
+    <button id="langBtn" class="lang" type="button" aria-label="Mudar idioma / Change language">
+      <span class="on-pt">PT</span><span class="sep">/</span><span class="on-en">EN</span>
+    </button>
+    <button id="menuBtn" class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="tag mono"><span class="dot"></span>CRQ-IV · <span lang="pt">Registro ativo</span><span lang="en">Active license</span></p>
+      <h1>Matheus Rodrigues <span class="grad">Mavignier</span> dos Santos</h1>
+      <p class="role">
+        <span lang="pt">Analista Químico · Técnico em Química</span>
+        <span lang="en">Chemical Analyst · Chemistry Technician</span>
+      </p>
+      <p class="typer mono"><span class="pre">&gt;</span> <span id="typer"></span><span class="caret"></span></p>
+      <div class="cta">
+        <a class="btn" href="#contato"><span lang="pt">Entrar em contato</span><span lang="en">Get in touch</span></a>
+        <a class="btn ghost" href="assets/docs/CV_Matheus_Mavignier_PT.pdf" target="_blank" rel="noopener" lang="pt">Currículo (PDF)</a>
+        <a class="btn ghost" href="assets/docs/CV_Matheus_Mavignier_EN.pdf" target="_blank" rel="noopener" lang="en">Résumé (PDF)</a>
+      </div>
+    </div>
+    <figure class="hero-fig" id="tilt">
+      <div class="fig-top mono"><span class="live"></span><span lang="pt">Reômetro · ensaio em andamento</span><span lang="en">Rheometer · test running</span></div>
+      <svg id="heroChart" viewBox="0 0 340 210" aria-hidden="true"></svg>
+      <div class="fig-read mono">
+        <div><small>t</small><b id="rT">0,00</b><small>min</small></div>
+        <div><small>S′</small><b id="rS">0,00</b><small>dN·m</small></div>
+        <div><small lang="pt">fase</small><small lang="en">stage</small><b id="rP" class="phase">—</b></div>
+      </div>
+      <figcaption class="mono small">MDR · 160 °C · <span lang="pt">curva ilustrativa</span><span lang="en">illustrative curve</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="strip">
+  <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+  <div class="wrap strip-in">
+    <div><b class="mono">~<span class="count" data-to="5">0</span></b><span lang="pt">anos em Controle de Qualidade</span><span lang="en">years in Quality Control</span></div>
+    <div><b class="mono">CRQ-IV</b><span lang="pt">registro profissional ativo</span><span lang="en">active professional license</span></div>
+    <div><b class="mono"><span class="count" data-to="2">0</span></b><span lang="pt">cursos de especialização em borracha</span><span lang="en">specialized rubber courses</span></div>
+    <div><b class="mono">PT · EN</b><span lang="pt">inglês intermediário</span><span lang="en">intermediate English</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="sobre" class="sec">
+  <div class="wrap two">
+    <div class="about-side">
+    <h2 class="sec-h reveal"><span class="num mono">01</span><span lang="pt">Sobre</span><span lang="en">About</span></h2>
+    <figure class="titr reveal" aria-hidden="true">
+      <svg viewBox="0 0 160 240">
+        <defs>
+          <clipPath id="flaskClip"><path d="M64 128 L64 152 L30 214 Q26 224 38 224 L122 224 Q134 224 130 214 L96 152 L96 128 Z"/></clipPath>
+          <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".0"/><stop offset=".3" stop-color="#ffffff" stop-opacity=".55"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+        </defs>
+        <!-- stand -->
+        <rect x="132" y="6" width="4" height="224" rx="2" class="t-stand"/>
+        <rect x="76" y="40" width="60" height="4" rx="2" class="t-stand"/>
+        <rect x="104" y="226" width="48" height="6" rx="3" class="t-stand"/>
+        <!-- burette -->
+        <rect x="72" y="6" width="16" height="96" rx="3" class="t-glass"/>
+        <rect x="74" y="20" width="12" height="80" rx="2" class="t-titrant" id="titrant"/>
+        <g class="t-grad"><path d="M72 22h5M72 32h3M72 42h5M72 52h3M72 62h5M72 72h3M72 82h5M72 92h3"/></g>
+        <path d="M77 102 L77 110 L83 110 L83 102" class="t-glass"/>
+        <rect x="70" y="104" width="20" height="5" rx="2" class="t-cock"/>
+        <path d="M79 110 L79 120 L81 120 L81 110 Z" class="t-glass"/>
+        <circle cx="80" cy="123" r="2.6" class="t-drop"/>
+        <!-- flask -->
+        <g clip-path="url(#flaskClip)">
+          <rect x="20" y="186" width="120" height="50" class="t-liquid" id="liquid"/>
+          <ellipse cx="80" cy="186" rx="50" ry="2.5" class="t-ripple"/>
+        </g>
+        <path d="M64 128 L64 152 L30 214 Q26 224 38 224 L122 224 Q134 224 130 214 L96 152 L96 128" class="t-flask"/>
+        <path d="M60 128 L100 128" class="t-flask"/>
+        <path d="M44 200 L56 180" stroke="url(#glass)" stroke-width="5" stroke-linecap="round"/>
+        <rect x="70" y="214" width="20" height="4" rx="2" class="t-stir"/>
+      </svg>
+      <figcaption class="mono small"><span lang="pt">titulação · ponto de viragem</span><span lang="en">titration · endpoint</span></figcaption>
+    </figure>
+  </div>
+    <div class="prose reveal">
+      <p lang="pt">Sou Analista Químico e Técnico em Química, com quase 5 anos de experiência no Controle de Qualidade de matérias-primas e insumos químicos para a indústria da borracha e de elastômeros.</p>
+      <p lang="en">I am a Chemical Analyst and Chemistry Technician with nearly 5 years of experience in Quality Control of raw materials and chemical additives for the rubber and elastomer industry.</p>
+      <p lang="pt">No laboratório, executo análises físico-químicas, emito laudos e certificados de análise, apoio a investigação de não conformidades, calibro equipamentos e escrevo procedimentos, sempre com foco em rastreabilidade e Boas Práticas de Laboratório.</p>
+      <p lang="en">In the lab, I run physicochemical analyses, issue test reports and certificates of analysis, support non-conformance investigations, calibrate equipment and write procedures, always focused on traceability and Good Laboratory Practice.</p>
+      <p lang="pt">Estudei a fundo tecnologia da borracha e aceleradores de vulcanização. Meu objetivo é unir a vivência em CQ ao conhecimento de compostos para crescer em controle de qualidade e em desenvolvimento e formulação.</p>
+      <p lang="en">I have studied rubber technology and vulcanization accelerators in depth. My goal is to combine QC experience with compounding knowledge to grow in quality control and in compound development and formulation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="competencias" class="sec alt">
+  <div class="wrap">
+    <h2 class="sec-h reveal"><span class="num mono">02</span><span lang="pt">Competências</span><span lang="en">Skills</span></h2>
+    <div class="cards">
+      <article class="card reveal spot">
+        <div class="card-head"><div class="el"><span class="z mono">1</span><span class="sym">An</span></div><h3><span lang="pt">Análises</span><span lang="en">Testing</span></h3></div>
+        <ul class="chips" lang="pt"><li>Físico-químicas</li><li>Volumetria</li><li>Gravimetria</li><li>Titulação</li><li>Padronização de soluções</li><li>UV-Vis</li><li>Potenciometria</li></ul>
+        <ul class="chips" lang="en"><li>Physicochemical</li><li>Volumetric</li><li>Gravimetric</li><li>Titration</li><li>Solution standardization</li><li>UV-Vis</li><li>Potentiometry</li></ul>
+      </article>
+      <article class="card reveal spot">
+        <div class="card-head"><div class="el"><span class="z mono">2</span><span class="sym">Bo</span></div><h3><span lang="pt">Borracha</span><span lang="en">Rubber</span></h3></div>
+        <ul class="chips" lang="pt"><li>Elastômeros</li><li>Matérias-primas e insumos</li><li>Vulcanização</li><li>Aceleradores</li><li>Reometria</li><li>Viscosidade Mooney</li><li>Dureza Shore</li><li>Ensaios físicos</li></ul>
+        <ul class="chips" lang="en"><li>Elastomers</li><li>Raw materials &amp; additives</li><li>Vulcanization</li><li>Accelerators</li><li>Rheometry</li><li>Mooney viscosity</li><li>Shore hardness</li><li>Physical testing</li></ul>
+      </article>
+      <article class="card reveal spot">
+        <div class="card-head"><div class="el"><span class="z mono">3</span><span class="sym">Qa</span></div><h3><span lang="pt">Qualidade</span><span lang="en">Quality</span></h3></div>
+        <ul class="chips" lang="pt"><li>BPL</li><li>ISO 9001</li><li>ISO/IEC 17025</li><li>Laudos e CoA</li><li>Não conformidades</li><li>Causa raiz</li><li>Rastreabilidade</li><li>Calibração</li><li>POPs</li></ul>
+        <ul class="chips" lang="en"><li>GLP</li><li>ISO 9001</li><li>ISO/IEC 17025</li><li>Reports &amp; CoA</li><li>Non-conformances</li><li>Root cause</li><li>Traceability</li><li>Calibration</li><li>SOPs</li></ul>
+      </article>
+      <article class="card reveal spot">
+        <div class="card-head"><div class="el"><span class="z mono">4</span><span class="sym">Dt</span></div><h3><span lang="pt">Dados e ferramentas</span><span lang="en">Data &amp; tools</span></h3></div>
+        <ul class="chips" lang="pt"><li>Excel</li><li>Tratamento de dados de CQ</li><li>Pacote Office</li><li>Inglês intermediário</li></ul>
+        <ul class="chips" lang="en"><li>Excel</li><li>QC data processing</li><li>Microsoft Office</li><li>Intermediate English</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="trajetoria" class="sec">
+  <div class="wrap">
+    <h2 class="sec-h reveal"><span class="num mono">03</span><span lang="pt">Trajetória</span><span lang="en">Background</span></h2>
+    <p class="hint mono small reveal"><span lang="pt">Clique em cada item para ver os detalhes</span><span lang="en">Click each item to see details</span></p>
+    <div class="tl-wrap" id="timeline"><span class="tl-line" aria-hidden="true"></span><span class="tl-fill" aria-hidden="true"></span><ol class="timeline">
+      <li class="acc reveal open">
+        <button class="acc-h" type="button" aria-expanded="true">
+          <span class="when mono"><span lang="pt">01/2022 – atual · experiência</span><span lang="en">01/2022 – present · experience</span></span>
+          <span class="acc-t"><span lang="pt">Analista Químico</span><span lang="en">Chemical Analyst</span> · Basile Química <span class="badge"><span lang="pt">atual</span><span lang="en">current</span></span></span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><div class="acc-in">
+          <p lang="pt">Controle de Qualidade de matérias-primas e insumos químicos para a indústria da borracha e de elastômeros.</p>
+          <p lang="en">Quality Control of raw materials and chemical additives for the rubber and elastomer industry.</p>
+          <ul class="ticks" lang="pt">
+            <li>Análises físico-químicas de matérias-primas e insumos, comparando resultados às especificações técnicas</li>
+            <li>Emissão de laudos e certificados de análise (CoA) para liberação de lotes</li>
+            <li>Interpretação de resultados e apoio à investigação de causas de não conformidades</li>
+            <li>Calibração e verificação de equipamentos de laboratório</li>
+            <li>Elaboração e revisão de procedimentos operacionais padrão (POPs)</li>
+            <li>Registro, rastreabilidade e documentação técnica conforme BPL</li>
+            <li>Preparo de amostras, soluções e reagentes e organização da rotina do laboratório</li>
+            <li>Organização e tratamento de dados de controle de qualidade em Excel</li>
+          </ul>
+          <ul class="ticks" lang="en">
+            <li>Physicochemical analyses of raw materials and additives against technical specifications</li>
+            <li>Test reports and certificates of analysis (CoA) for batch release</li>
+            <li>Result interpretation and support to non-conformance root-cause investigations</li>
+            <li>Calibration and verification of laboratory equipment</li>
+            <li>Writing and reviewing standard operating procedures (SOPs)</li>
+            <li>Records, traceability and technical documentation under GLP</li>
+            <li>Sample, solution and reagent preparation and daily lab workflow</li>
+            <li>Organizing and processing quality control data in Excel</li>
+          </ul>
+        </div></div>
+      </li>
+      <li class="acc reveal">
+        <button class="acc-h" type="button" aria-expanded="false">
+          <span class="when mono"><span lang="pt">10/2026 · curso</span><span lang="en">10/2026 · course</span></span>
+          <span class="acc-t"><span lang="pt">Estudo dos Aceleradores de Vulcanização</span><span lang="en">Vulcanization Accelerators</span> · Modulus</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><div class="acc-in">
+          <ul class="chips" lang="pt"><li>Curva reométrica</li><li>Scorch e t90</li><li>Efeito da espessura na cura</li><li>Mercaptos</li><li>Sulfenamidas</li><li>Guanidinas</li><li>Tiurans</li><li>Ditiocarbamatos</li><li>Sulfenamidas × DPG / TMTD</li><li>Retardadores</li><li>Peróxidos</li><li>Sinergismo</li><li>Masterbatches</li><li>Sistemas EV / SEV</li><li>Nitrosaminas</li><li>Toxicidade</li><li>Formulações</li></ul>
+          <ul class="chips" lang="en"><li>Cure curve</li><li>Scorch and t90</li><li>Thickness effect on cure</li><li>Thiazoles</li><li>Sulfenamides</li><li>Guanidines</li><li>Thiurams</li><li>Dithiocarbamates</li><li>Sulfenamides × DPG / TMTD</li><li>Retarders</li><li>Peroxides</li><li>Synergism</li><li>Masterbatches</li><li>EV / SEV systems</li><li>Nitrosamines</li><li>Toxicity</li><li>Formulations</li></ul>
+        </div></div>
+      </li>
+      <li class="acc reveal">
+        <button class="acc-h" type="button" aria-expanded="false">
+          <span class="when mono"><span lang="pt">10/2025 · curso</span><span lang="en">10/2025 · course</span></span>
+          <span class="acc-t"><span lang="pt">Tecnologia da Borracha</span><span lang="en">Rubber Technology</span> · Modulus</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><div class="acc-in">
+          <ul class="chips" lang="pt"><li>Reometria</li><li>Viscosidade Mooney</li><li>Tack</li><li>Dureza</li><li>Tensão e alongamento na ruptura</li><li>Módulo</li><li>Resistência ao rasgo</li><li>Tension set</li><li>Resiliência / histerese</li><li>Abrasão</li><li>Densidade</li><li>DPC</li><li>Envelhecimento térmico</li><li>Elastômeros de uso geral e especial</li><li>Insumos da formulação</li><li>Mistura</li><li>Tipos de vulcanização</li><li>Tradução de normas</li></ul>
+          <ul class="chips" lang="en"><li>Rheometry</li><li>Mooney viscosity</li><li>Tack</li><li>Hardness</li><li>Tensile strength and elongation</li><li>Modulus</li><li>Tear strength</li><li>Tension set</li><li>Resilience / hysteresis</li><li>Abrasion</li><li>Density</li><li>Compression set</li><li>Heat aging</li><li>General and specialty elastomers</li><li>Compounding ingredients</li><li>Mixing</li><li>Cure systems</li><li>Technical standards</li></ul>
+        </div></div>
+      </li>
+      <li class="acc reveal">
+        <button class="acc-h" type="button" aria-expanded="false">
+          <span class="when mono"><span lang="pt">2018 – 2020 · formação</span><span lang="en">2018 – 2020 · education</span></span>
+          <span class="acc-t"><span lang="pt">Técnico em Química</span><span lang="en">Chemistry Technician Diploma</span> · SENAI Zerrenner</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><div class="acc-in">
+          <p lang="pt">Formação técnica em análises químicas, controle de qualidade e gestão laboratorial.</p>
+          <p lang="en">Technical program in chemical analysis, quality control and lab management (SENAI is Brazil's National Industrial Training Service).</p>
+          <ul class="chips" lang="pt"><li>Química geral, orgânica e inorgânica</li><li>Volumetria</li><li>Gravimetria</li><li>Análise qualitativa</li><li>UV-Vis</li><li>Cromatografia (HPLC / CG)</li><li>Potenciometria</li><li>Microbiologia industrial</li><li>Tratamento de efluentes</li><li>BPL</li><li>ISO 9001</li><li>ISO/IEC 17025</li><li>NRs</li></ul>
+          <ul class="chips" lang="en"><li>General, organic and inorganic chemistry</li><li>Volumetric analysis</li><li>Gravimetric analysis</li><li>Qualitative analysis</li><li>UV-Vis</li><li>Chromatography (HPLC / GC)</li><li>Potentiometry</li><li>Industrial microbiology</li><li>Wastewater treatment</li><li>GLP</li><li>ISO 9001</li><li>ISO/IEC 17025</li><li>Safety standards (NRs)</li></ul>
+        </div></div>
+      </li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contato" class="sec contact">
+  <div class="wrap">
+    <h2 class="sec-h reveal"><span class="num mono">04</span><span lang="pt">Contato</span><span lang="en">Contact</span></h2>
+    <p class="contact-lead reveal"><span lang="pt">Aberto a oportunidades em Controle de Qualidade, laboratório e desenvolvimento de compostos de borracha.</span><span lang="en">Open to opportunities in Quality Control, laboratory and rubber compound development.</span></p>
+    <div class="contact-grid">
+      <div class="c-item spot">
+        <span class="mono small">E-mail</span>
+        <a class="c-link" href="mailto:rodrigues.mavignier@gmail.com">rodrigues.mavignier@gmail.com</a>
+        <button type="button" class="copy" id="copyMail" data-copy="rodrigues.mavignier@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span lang="pt">Copiar</span><span lang="en">Copy</span></button>
+      </div>
+      <a href="https://wa.me/5511940862791" target="_blank" rel="noopener" class="c-item spot"><span class="mono small">WhatsApp</span>+55 11 94086-2791<span class="arrow">→</span></a>
+      <a href="https://www.linkedin.com/in/matheus-rodrigues-mavignier-dos-santos-3492b541b/" target="_blank" rel="noopener" class="c-item spot"><span class="mono small">LinkedIn</span><span lang="pt">acessar perfil</span><span lang="en">view profile</span><span class="arrow">→</span></a>
+      <a href="assets/docs/CV_Matheus_Mavignier_PT.pdf" target="_blank" rel="noopener" class="c-item spot" lang="pt"><span class="mono small">Currículo</span>baixar PDF<span class="arrow">→</span></a>
+      <a href="assets/docs/CV_Matheus_Mavignier_EN.pdf" target="_blank" rel="noopener" class="c-item spot" lang="en"><span class="mono small">Résumé</span>download PDF<span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap mono small">© 2026 Matheus Rodrigues Mavignier dos Santos · São Paulo – SP</div>
+</footer>
+
+<div class="scrim" id="scrim" aria-hidden="true"></div>
+<aside class="drawer" id="drawer" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="mark-t">Matheus Mavignier</span>
+    <button class="icon-btn" id="drawerClose" type="button" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#sobre"><span class="mono">01</span><span lang="pt">Sobre</span><span lang="en">About</span></a>
+    <a href="#competencias"><span class="mono">02</span><span lang="pt">Competências</span><span lang="en">Skills</span></a>
+    <a href="#trajetoria"><span class="mono">03</span><span lang="pt">Trajetória</span><span lang="en">Background</span></a>
+    <a href="#contato"><span class="mono">04</span><span lang="pt">Contato</span><span lang="en">Contact</span></a>
+  </nav>
+  <div class="drawer-foot">
+    <a class="btn" href="https://wa.me/5511940862791" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn ghost" href="assets/docs/CV_Matheus_Mavignier_PT.pdf" target="_blank" rel="noopener" lang="pt">Currículo (PDF)</a>
+    <a class="btn ghost" href="assets/docs/CV_Matheus_Mavignier_EN.pdf" target="_blank" rel="noopener" lang="en">Résumé (PDF)</a>
+    <p class="mono small">CRQ-IV · São Paulo – SP</p>
+  </div>
+</aside>
+
+<a class="fab fab-wa" href="https://wa.me/5511940862791" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.3 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+<button class="fab fab-top" id="toTop" type="button" aria-label="Voltar ao topo">
+  <svg class="ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" class="ring-bg"/><circle cx="24" cy="24" r="21" class="ring-fg" id="ringFg"/></svg>
+  <svg class="arrow-up" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/script.js?v=9"></script>
+</body>
+</html>
