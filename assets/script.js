@@ -373,6 +373,32 @@
     resize(); requestAnimationFrame(frame);
   })();
 
+
+  /* ---------- touch/tap feedback: ripple ---------- */
+  function ripple(e) {
+    var el = e.currentTarget, r = el.getBoundingClientRect(), p = e.touches ? e.touches[0] : e;
+    var s = Math.max(r.width, r.height) * 1.2, d = document.createElement('span');
+    d.className = 'rip'; d.style.width = d.style.height = s + 'px';
+    d.style.left = (p.clientX - r.left - s / 2) + 'px'; d.style.top = (p.clientY - r.top - s / 2) + 'px';
+    el.appendChild(d); setTimeout(function () { d.remove(); }, 700);
+  }
+  $$('.cc, .btn, .acc-h, .card, .cc-btn, .icon-btn, .drawer-nav a').forEach(function (el) {
+    el.classList.add('has-rip');
+    el.addEventListener('pointerdown', ripple);
+  });
+
+  /* ---------- staggered entrance for card groups (great on mobile) ---------- */
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        var kids = Array.prototype.slice.call(en.target.children);
+        if (en.isIntersecting) kids.forEach(function (k, i) { k.style.transitionDelay = (i * 110) + 'ms'; k.classList.add('pop'); });
+        else if (en.boundingClientRect.top > 0) kids.forEach(function (k) { k.style.transitionDelay = '0ms'; k.classList.remove('pop'); });
+      });
+    }, { threshold: 0.15 });
+    $$('.stagger').forEach(function (g) { so.observe(g); });
+  }
+
   /* ---------- init ---------- */
   var saved = null;
   try { saved = localStorage.getItem('mm-lang'); } catch (e) {}
